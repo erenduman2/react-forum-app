@@ -5,7 +5,7 @@ import { useUser } from "../../context/UserContext";
 import { useState, useEffect } from 'react';
 
 
-function Dashboard() {
+function Homepage() {
 
   const { username, setUsername, passwords, setPasswords, isLoggedIn, setIsLoggedIn, userInfo, setUserInfo, loggedInUser, setLoggedInUser } = useUser();
   const [tmpUser, setTmpUser] = useState();
@@ -79,11 +79,11 @@ function Dashboard() {
         register ? invalidUserName ? <div className={styles.usernameInfo} >username is already taken.</div> : <div></div> : <div></div>
       }
       {
-        login ? wrongInfo ? <div className={styles.usernameInfo} >şifre ya da kullanıcı adı hatalı</div> : <div></div> : <div></div>
+        login ? wrongInfo ? <div className={styles.usernameInfo} >password or username is wrong.</div> : <div></div> : <div></div>
       }
 
     </div>
   )
 }
 
-export default Dashboard
+export default Homepage

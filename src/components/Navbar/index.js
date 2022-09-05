@@ -28,7 +28,7 @@ function Navbar() {
             <Box className={styles.nav}>
                 <div className={styles.left}>
                     <Link className="link" to="/" >
-                        <Button sx={{ marginRight: 7 }} color='warning' variant="contained">Ana Sayfa</Button>
+                        <Button sx={{ marginRight: 7 }} color='warning' variant="contained">Homepage</Button>
                     </Link>
                     <Link className="link" to="/forum" >
                         <Button color='warning' variant="contained">Forum</Button>
@@ -37,7 +37,7 @@ function Navbar() {
                 <div className={styles.right}>
                     <Grid container spacing={0}>
                         {
-                            <Link to="/new">
+                            <Link className="link" to="/new">
                                 <ColorButton sx={{ marginRight: 4 }} variant="contained">New Question</ColorButton>
                             </Link>
                         }

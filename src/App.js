@@ -8,7 +8,7 @@ import {
 
 } from "react-router-dom";
 
-import Dashboard from "./pages/Dashboard";
+import Homepage from "./pages/Homepage";
 import Forum from "./pages/Forum";
 import Profile from "./pages/Profile";
 import NewQuestion from "./pages/NewQuestion";
@@ -55,7 +55,7 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route path='/' element={<Dashboard />} />
+        <Route path='/' element={<Homepage />} />
         <Route path='/forum' element={<Forum />} />
         <Route path='/forum/:q_id' element={<QuestionDetail />} />
         <Route element={<ProtectedRouteForProfile />}>

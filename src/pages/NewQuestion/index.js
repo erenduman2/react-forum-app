@@ -46,16 +46,16 @@ function NewQuestion() {
         <div className='newq'>
             <form onSubmit={submitHandler} >
                 <Box style={{ marginTop: 50 }} className={styles.center} >
-                    <TextField label='Konu' variant="filled" rows={1} value={header} onChange={handleAChange} multiline={true} className={styles.textArea}></TextField>
+                    <TextField label='Subject' variant="filled" rows={1} value={header} onChange={handleAChange} multiline={true} className={styles.textArea}></TextField>
                 </Box>
                 <Box className={styles.center} >
-                    <TextField label='Soru' variant="filled" rows={18} value={question} onChange={handleQChange} multiline={true} className={styles.textArea}></TextField>
+                    <TextField label='Question' variant="filled" rows={18} value={question} onChange={handleQChange} multiline={true} className={styles.textArea}></TextField>
                 </Box>
                 <Box className={styles.center} >
                     <TextField label='User Name' variant="filled" rows={1} value={isLoggedIn ? loggedInUser : userName} onChange={handleUChange} multiline={true} className={styles.userName}></TextField>
                 </Box>
                 <Box className={styles.send}>
-                    <Button type="submit" color='primary' variant="contained" sx={{ height: 30 }} >Gönder</Button>
+                    <Button type="submit" color='primary' variant="contained" sx={{ height: 30 }} >Ask</Button>
                 </Box>
             </form>
         </div>

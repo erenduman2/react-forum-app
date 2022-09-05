@@ -35,7 +35,8 @@
 }
 
 .profile {
-    background-color: rgb(179, 179, 179);
+    /* background-color: rgb(179, 179, 179); */
+    border: 1px solid green;
     border-radius: 10px;
     padding-right: 100px;
     padding-top: 40px;

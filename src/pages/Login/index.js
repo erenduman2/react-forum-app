@@ -52,7 +52,7 @@ function Login() {
         <Button type='submit' onClick={() => { setLogin(true); }} sx={{ marginLeft: 114 }} color='warning' variant="contained">Login</Button>
       </form>
       {
-        login ? wrongInfo ? <div className={styles.usernameInfo} >şifre ya da kullanıcı adı hatalı</div> : <div className={styles.username} >giriş başarılı</div> : <div></div>
+        login ? wrongInfo ? <div className={styles.usernameInfo} >password or username is wrong.</div> : <div className={styles.username} >giriş başarılı</div> : <div></div>
       }
 
     </div>
