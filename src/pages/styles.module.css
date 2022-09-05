@@ -1,0 +1,87 @@
+.end {
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+
+}
+
+.change:hover {
+    color: rgb(0, 0, 207);
+    cursor: pointer;
+}
+
+.title {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.paragraph {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.anchor {
+    margin-left: 910px;
+    width: 50px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: purple;
+}
+
+.profile {
+    background-color: rgb(179, 179, 179);
+    border-radius: 10px;
+    padding-right: 100px;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    margin-left: 700px;
+    width: 320px;
+    height: 600px;
+    align-items: center;
+}
+
+.username {
+    margin-top: 20px;
+    margin-left: 880px;
+    color: rgb(0, 84, 139);
+}
+
+.usernameInfo {
+    margin-top: 20px;
+    margin-left: 870px;
+    color: rgb(0, 84, 139);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.textArea {
+    padding-left: 100px;
+    width: 950px;
+    text-decoration: none;
+}
+
+.userName {
+    padding-left: 850px;
+    width: 400px;
+    text-decoration: none;
+}
+
+.send {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.alias {
+    cursor: all-scroll;
+}
