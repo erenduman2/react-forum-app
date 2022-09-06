@@ -11,7 +11,7 @@ Then, you can run:
 
 ### `yarn start`
 
-Project will start in develeopment mode. 
+Project will start in development mode. 
 
 ## Tools
 
