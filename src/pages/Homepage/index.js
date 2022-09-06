@@ -64,17 +64,9 @@ function Homepage() {
 
       <p className={styles.paragraph}>This site stores the answers and questions in localstorage.</p>
       <p className={styles.paragraph}>  You can ask a question as a guest, but you cannot edit it later.</p>
+      <a style={{textDecoration: "none", fontSize: 28, color: "blue"}} target="_blank" className={styles.paragraph} href="https://github.com/erenduman2/react-forum-app">Code</a>
       <br /><br /><br />
       {!isLoggedIn &&
-        // <Box>
-        //   <form onSubmit={submitHandler}>
-        //     <TextField sx={{ marginLeft: 105, marginTop: 10 }} value={tmpUser} onChange={changeUserHandler} id="eren" label="username" variant="outlined"></TextField>
-        //     <TextField sx={{ marginLeft: 105, marginTop: 3 }} value={tmpPassword} onChange={changePassHandler} label="password" variant="outlined" type="password"></TextField>
-        //     <br /><br /><br />
-        //     <Button type='submit' onClick={() => { setLogin(true); setRegister(false); }} sx={{ marginLeft: 105 }} color='warning' variant="contained">Login</Button>
-        //     <Button type='submit' onClick={() => { setRegister(true); setLogin(false); }} color='warning' variant="outlined" sx={{ marginLeft: 5 }} >Register</Button>
-        //   </form>
-        // </Box>
         <Box className={styles.center}>
           <form onSubmit={submitHandler}>
             <TextField value={tmpUser} onChange={changeUserHandler} id="eren" label="username" variant="outlined"></TextField>
