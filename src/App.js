@@ -4,8 +4,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link,
-
 } from "react-router-dom";
 
 import Homepage from "./pages/Homepage";
@@ -27,18 +25,13 @@ function App() {
 
   const {
     questions,
-    setQuestions,
     answer,
-    setAnswer
   } = useQuestion();
 
   const {
     isLoggedIn,
-    setIsLoggedIn,
     userInfo,
-    setUserInfo,
     loggedInUser,
-    setLoggedInUser
   } = useUser();
 
 

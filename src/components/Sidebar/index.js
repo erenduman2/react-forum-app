@@ -45,7 +45,7 @@ function Sidebar() {
     >
       <List>
         {['New Question'].map((text, index) => (
-          <Link style={{ textDecoration: "none", color: "black" }} to={"new"}>
+          <Link key={index} style={{ textDecoration: "none", color: "black" }} to={"new"}>
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
@@ -62,7 +62,7 @@ function Sidebar() {
 
       <List>
         {['Login', 'Register'].map((text, index) => (
-          <Link style={{ textDecoration: "none", color: "black" }} to={index == 0 ? "login" : "register"}>
+          <Link key={index} style={{ textDecoration: "none", color: "black" }} to={index == 0 ? "login" : "register"}>
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>

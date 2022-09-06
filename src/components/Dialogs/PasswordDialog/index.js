@@ -1,7 +1,6 @@
 import React from 'react'
 import {
   Button,
-  Box
 } from '@mui/material/';
 import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
@@ -14,7 +13,7 @@ import { useState } from 'react';
 
 
 function PasswordDialog({ openPassword, setOpenPassword }) {
-  const { isLoggedIn, userInfo, setUserInfo, loggedInUser } = useUser();
+  const { userInfo, setUserInfo, loggedInUser } = useUser();
 
   const [oldPassword, setOldPassword] = useState();
   const [newPassword, setNewPassword] = useState();
@@ -25,12 +24,10 @@ function PasswordDialog({ openPassword, setOpenPassword }) {
   };
 
   const handleChange = () => {
-    alert("password change");
-    let userKey;
     const tmpUserInfo = [...userInfo];
     userInfo.map((item, key) => {
-      if (item.username == loggedInUser) {
-        if (tmpUserInfo[key].password == oldPassword) {
+      if (item.username === loggedInUser) {
+        if (tmpUserInfo[key].password === oldPassword) {
           tmpUserInfo[key].password = newPassword;
           setWrongPassword(false);
           handleClose();

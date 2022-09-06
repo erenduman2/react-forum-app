@@ -1,4 +1,4 @@
-import { Button, TextField } from '@mui/material';
+import { Box, Button, TextField } from '@mui/material';
 import React from 'react'
 import styles from "../styles.module.css";
 import { useUser } from "../../context/UserContext";
@@ -7,9 +7,9 @@ import { useState, useEffect } from 'react';
 
 function Homepage() {
 
-  const { username, setUsername, passwords, setPasswords, isLoggedIn, setIsLoggedIn, userInfo, setUserInfo, loggedInUser, setLoggedInUser } = useUser();
-  const [tmpUser, setTmpUser] = useState();
-  const [tmpPassword, setTmpPassword] = useState();
+  const { isLoggedIn, setIsLoggedIn, userInfo, setUserInfo, setLoggedInUser } = useUser();
+  const [tmpUser, setTmpUser] = useState("");
+  const [tmpPassword, setTmpPassword] = useState("");
   const [login, setLogin] = useState(false);
   const [register, setRegister] = useState(false);
   const [invalidUserName, setInvalidUserName] = useState(false);
@@ -68,13 +68,28 @@ function Homepage() {
 
       <p className={styles.paragraph}>This site stores the answers and questions in localstorage.</p>
       <p className={styles.paragraph}>  You can ask a question as a guest, but you cannot edit it later.</p>
-      {!isLoggedIn && <form onSubmit={submitHandler}>
-        <TextField sx={{ marginLeft: 105, marginTop: 10 }} value={tmpUser} onChange={changeUserHandler} id="eren" label="username" variant="outlined"></TextField>
-        <TextField sx={{ marginLeft: 105, marginTop: 3 }} value={tmpPassword} onChange={changePassHandler} label="password" variant="outlined" type="password"></TextField>
-        <br /><br /><br />
-        <Button type='submit' onClick={() => { setLogin(true); setRegister(false); }} sx={{ marginLeft: 105 }} color='warning' variant="contained">Login</Button>
-        <Button type='submit' onClick={() => { setRegister(true); setLogin(false); }} color='warning' variant="outlined" sx={{ marginLeft: 5 }} >Register</Button>
-      </form>}
+      <br /><br /><br />
+      {!isLoggedIn &&
+        // <Box>
+        //   <form onSubmit={submitHandler}>
+        //     <TextField sx={{ marginLeft: 105, marginTop: 10 }} value={tmpUser} onChange={changeUserHandler} id="eren" label="username" variant="outlined"></TextField>
+        //     <TextField sx={{ marginLeft: 105, marginTop: 3 }} value={tmpPassword} onChange={changePassHandler} label="password" variant="outlined" type="password"></TextField>
+        //     <br /><br /><br />
+        //     <Button type='submit' onClick={() => { setLogin(true); setRegister(false); }} sx={{ marginLeft: 105 }} color='warning' variant="contained">Login</Button>
+        //     <Button type='submit' onClick={() => { setRegister(true); setLogin(false); }} color='warning' variant="outlined" sx={{ marginLeft: 5 }} >Register</Button>
+        //   </form>
+        // </Box>
+        <Box className={styles.center}>
+          <form onSubmit={submitHandler}>
+            <TextField value={tmpUser} onChange={changeUserHandler} id="eren" label="username" variant="outlined"></TextField>
+            <br /><br />
+            <TextField value={tmpPassword} onChange={changePassHandler} label="password" variant="outlined" type="password"></TextField>
+            <br /><br /><br />
+            <Button type='submit' onClick={() => { setLogin(true); setRegister(false); }} color='warning' variant="contained">Login</Button>
+            <Button type='submit' onClick={() => { setRegister(true); setLogin(false); }} color='warning' variant="outlined" sx={{ marginLeft: 5 }} >Register</Button>
+          </form>
+        </Box>
+      }
       {
         register ? invalidUserName ? <div className={styles.usernameInfo} >username is already taken.</div> : <div></div> : <div></div>
       }

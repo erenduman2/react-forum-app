@@ -1,4 +1,4 @@
-import { Button, TextField, Typography } from '@mui/material';
+import { Box, Button, TextField, Typography } from '@mui/material';
 import React from 'react'
 import styles from "../styles.module.css";
 import { useUser } from "../../context/UserContext";
@@ -45,12 +45,24 @@ function Login() {
       <Typography sx={{ marginRight: 3, marginTop: 13, color: "brown" }} className={styles.title} variant="h3" gutterBottom>
         Login
       </Typography>
-      <form onSubmit={submitHandler}>
-        <TextField sx={{ marginLeft: 105, marginTop: 3 }} value={tmpUser} onChange={changeUserHandler} id="eren" label="username" variant="outlined"></TextField>
-        <TextField sx={{ marginLeft: 105, marginTop: 3 }} value={tmpPassword} onChange={changePassHandler} label="password" variant="outlined" type="password"></TextField>
-        <br /><br /><br />
-        <Button type='submit' onClick={() => { setLogin(true); }} sx={{ marginLeft: 114 }} color='warning' variant="contained">Login</Button>
-      </form>
+      <br /><br />
+      <Box className={styles.center}>
+          <form onSubmit={submitHandler}>
+            <TextField value={tmpUser} onChange={changeUserHandler} id="eren" label="username" variant="outlined"></TextField>
+            <br /><br />
+            <TextField value={tmpPassword} onChange={changePassHandler} label="password" variant="outlined" type="password"></TextField>
+            <br /><br /><br />
+            <Button type='submit' onClick={() => { setLogin(true)}} color='warning' variant="contained">Login</Button>
+          </form>
+        </Box>
+      {/* <Box>
+        <form onSubmit={submitHandler}>
+          <TextField sx={{ marginLeft: 105, marginTop: 3 }} value={tmpUser} onChange={changeUserHandler} id="eren" label="username" variant="outlined"></TextField>
+          <TextField sx={{ marginLeft: 105, marginTop: 3 }} value={tmpPassword} onChange={changePassHandler} label="password" variant="outlined" type="password"></TextField>
+          <br /><br /><br />
+          <Button type='submit' onClick={() => { setLogin(true); }} sx={{ marginLeft: 114 }} color='warning' variant="contained">Login</Button>
+        </form>
+      </Box> */}
       {
         login ? wrongInfo ? <div className={styles.usernameInfo} >password or username is wrong.</div> : <div className={styles.username} >giriş başarılı</div> : <div></div>
       }

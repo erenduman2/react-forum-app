@@ -1,7 +1,6 @@
 import React from 'react'
 import {
   Button,
-  Box
 } from '@mui/material/';
 import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
@@ -27,19 +26,10 @@ function UsernameDialog({ openUsername, setOpenUsername }) {
     setOpenUsername(false);
   };
 
-  const isInvalid = (username) => {
-    userInfo.map((item, key) => {
-      if (item.username == username) {
-        alert("eşit")
-        setInvalidUsername(true);
-      }
-    })
-  };
-
   const changeQuestionUser = (oldUsername, newUsername) => {
     const tmpQuestions = [...questions];
     questions.map((item, key) => {
-      if(item.user == oldUsername){
+      if(item.user === oldUsername){
         tmpQuestions[key].user = newUsername;
       }
     });
@@ -49,12 +39,12 @@ function UsernameDialog({ openUsername, setOpenUsername }) {
   const handleChange = () => {
     setInvalidUsername(false);
     if (userInfo.every((item) => {
-      return item.username != newUsername;
+      return item.username !== newUsername;
     })) {
       const tmpUserInfo = [...userInfo];
       userInfo.map((item, key) => {
-        if (item.username == loggedInUser) {
-          if (tmpUserInfo[key].password == password) {
+        if (item.username === loggedInUser) {
+          if (tmpUserInfo[key].password === password) {
             changeQuestionUser(tmpUserInfo[key].username, newUsername);
             tmpUserInfo[key].username = newUsername;
             setLoggedInUser(newUsername);
