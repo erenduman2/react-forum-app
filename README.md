@@ -1,5 +1,5 @@
 # Forum App
-Live: https://ornate-monstera-0609a9.netlify.app/
+Live: https://ornate-monstera-0609a9.netlify.app
 
 ## Usage
 
