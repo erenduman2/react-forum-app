@@ -39,19 +39,11 @@
     padding-right: 100px;
     padding-top: 40px;
     padding-bottom: 10px;
-    /* margin-left: 700px; */
     margin-left: 10px;
     width: 320px;
     height: 600px;
     align-items: center;
 }
-
-/* .profile{
-    border: 1px solid green;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    width: 320px;
-} */
 
 .username {
     margin-top: 20px;
@@ -60,8 +52,9 @@
 }
 
 .usernameInfo {
+    display: flex;
+    justify-content: center;
     margin-top: 20px;
-    margin-left: 870px;
     color: rgb(0, 84, 139);
 }
 

@@ -6,15 +6,11 @@ import { useState, useEffect } from 'react';
 
 function Register() {
   const { setIsLoggedIn, userInfo, setUserInfo, setLoggedInUser } = useUser();
-  const [tmpUser, setTmpUser] = useState();
-  const [tmpPassword, setTmpPassword] = useState();
+  const [tmpUser, setTmpUser] = useState("");
+  const [tmpPassword, setTmpPassword] = useState("");
   const [login, setLogin] = useState(false);
   const [register, setRegister] = useState(false);
   const [invalidUserName, setInvalidUserName] = useState(false);
-
-  useEffect(() => {
-    console.log(login, register);
-  }, [])
 
   const submitHandler = (e) => {
     e.preventDefault();

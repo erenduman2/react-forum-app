@@ -54,10 +54,6 @@ const QuesitonProvider = ({children}) => {
         setAnswer,
     }
     
-    useEffect(() => {
-        console.log(questions);
-    }, [questions]);
-
     return(
         <QuestionContext.Provider value={values} > {children} </QuestionContext.Provider>
     )

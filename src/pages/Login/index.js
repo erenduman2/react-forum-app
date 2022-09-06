@@ -7,8 +7,8 @@ import { useState, useEffect } from 'react';
 function Login() {
 
   const { setIsLoggedIn, userInfo, setLoggedInUser } = useUser();
-  const [tmpUser, setTmpUser] = useState();
-  const [tmpPassword, setTmpPassword] = useState();
+  const [tmpUser, setTmpUser] = useState("");
+  const [tmpPassword, setTmpPassword] = useState("");
   const [login, setLogin] = useState(false);
   const [wrongInfo, setWrongInfo] = useState(false);
 

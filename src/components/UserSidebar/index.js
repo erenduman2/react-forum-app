@@ -61,7 +61,7 @@ function UserSidebar() {
     >
       <List>
         {['Profile'].map((text, index) => (
-          <Link style={{ textDecoration: "none", color: "black" }} to={"profile"}>
+          <Link key={index} style={{ textDecoration: "none", color: "black" }} to={"profile"}>
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
@@ -78,7 +78,7 @@ function UserSidebar() {
 
       <List>
         {['New Question', 'My Questions', 'Question Edit'].map((text, index) => (
-          <Link style={{ textDecoration: "none", color: "black" }} to={index == 0 ? "new" : index == 1 ? "my-ques" : "ques-edit"}>
+          <Link key={index} style={{ textDecoration: "none", color: "black" }} to={index == 0 ? "new" : index == 1 ? "my-ques" : "ques-edit"}>
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
@@ -93,7 +93,7 @@ function UserSidebar() {
       <Divider />
       <List>
         {['Change Username', 'Change Password', 'Logout'].map((text, index) => (
-          <button style={{ backgroundColor: "rgb(188, 255, 191)", borderWidth: 0 }} onClick={() => {
+          <button key={index} style={{ backgroundColor: "rgb(188, 255, 191)", borderWidth: 0 }} onClick={() => {
             if (index == 0) {
               handleClickOpenForUsername();
             }

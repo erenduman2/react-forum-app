@@ -15,10 +15,6 @@ function Homepage() {
   const [invalidUserName, setInvalidUserName] = useState(false);
   const [wrongInfo, setWrongInfo] = useState(false);
 
-  useEffect(() => {
-    console.log(login, register);
-  }, [])
-
   const submitHandler = (e) => {
     e.preventDefault();
     setInvalidUserName(false);
