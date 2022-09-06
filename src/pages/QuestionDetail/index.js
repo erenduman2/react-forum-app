@@ -56,7 +56,6 @@ function QuestionDetail() {
         })
       }
       {
-        // 950*125
         answer.map((item, key) => {
           if (item.key == q_id) {
             return <div key={key + 1}>
@@ -70,14 +69,13 @@ function QuestionDetail() {
         })
       }
       <form onSubmit={submitHandler}>
-        <Box className={styles.center}><TextField variant="filled" value={newAnswer} onChange={changeAHandler} rows={4} multiline={true} className={styles.textArea}></TextField></Box>
+        <Box className={styles.center}><TextField id='answer' variant="filled" value={newAnswer} onChange={changeAHandler} rows={4} multiline={true} className={styles.textArea}></TextField></Box>
         <Box className={styles.center}><TextField sx={{ width: 300, marginLeft: 82 }} variant="filled" 
         value={isLoggedIn ? loggedInUser : user} onChange={changeUHandler} rows={1} multiline={true} className={styles.textArea}></TextField></Box>
         <Box className={styles.send}>
           <Button type="submit" color='primary' variant="contained" sx={{ height: 30 }} >Yanitla</Button>
         </Box>
       </form>
-      <a name="answer"></a>
     </div>
   )
 }

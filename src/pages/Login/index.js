@@ -52,17 +52,9 @@ function Login() {
             <br /><br />
             <TextField value={tmpPassword} onChange={changePassHandler} label="password" variant="outlined" type="password"></TextField>
             <br /><br /><br />
-            <Button type='submit' onClick={() => { setLogin(true)}} color='warning' variant="contained">Login</Button>
+            <Button sx={{marginLeft: 8}} type='submit' onClick={() => { setLogin(true)}} color='warning' variant="contained">Login</Button>
           </form>
         </Box>
-      {/* <Box>
-        <form onSubmit={submitHandler}>
-          <TextField sx={{ marginLeft: 105, marginTop: 3 }} value={tmpUser} onChange={changeUserHandler} id="eren" label="username" variant="outlined"></TextField>
-          <TextField sx={{ marginLeft: 105, marginTop: 3 }} value={tmpPassword} onChange={changePassHandler} label="password" variant="outlined" type="password"></TextField>
-          <br /><br /><br />
-          <Button type='submit' onClick={() => { setLogin(true); }} sx={{ marginLeft: 114 }} color='warning' variant="contained">Login</Button>
-        </form>
-      </Box> */}
       {
         login ? wrongInfo ? <div className={styles.usernameInfo} >password or username is wrong.</div> : <div className={styles.username} >giriş başarılı</div> : <div></div>
       }
